@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Daniel Devátý | AI MVP Architect Portfolio
 
-# Run and deploy your AI Studio app
+Moderní, vysoce výkonné portfolio postavené pro prezentaci technické expertízy a rychlého dodávání AI produktů.
 
-This contains everything you need to run your app locally.
+## 🚀 Co to dělá?
+Tato aplikace slouží jako digitální vizitka a prodejní nástroj pro Daniela Devátého. Hlavním cílem je ukázat schopnost stavět funkční MVP (Minimum Viable Products) v rekordním čase.
 
-View your app in AI Studio: https://ai.studio/apps/50cf8d47-015b-4811-a2b4-447c6d96cfc6
+### Klíčové funkce:
+- **Interaktivní Showcase Služeb:** Sekce "What I Build" využívá sticky horizontální scroll pro dynamickou prezentaci klíčových kompetencí.
+- **AI Chatbot (Gemini 3.1 Pro):** Integrovaný inteligentní asistent v pravém dolním rohu, který s uživatelem projde jeho vizi projektu, nabídne hrubý odhad ceny a sbírá kontakty.
+- **Bento-Grid Portfolio:** Moderní zobrazení vybraných projektů a technického arzenálu.
+- **Konverzní Trychtýř:** Od prvního dojmu v Hero sekci až po kontaktní formulář, vše je optimalizováno pro rychlou akci.
 
-## Run Locally
+## 🎨 Jak to vypadá?
+Design se drží estetiky **"Dark Luxury"**:
+- **Barevná paleta:** Hluboký antracit (`#0e0e0e`) v kombinaci s neonově tyrkysovými akcenty (`#49f4c8`).
+- **Typografie:** Kombinace moderních fontů *Space Grotesk* pro nadpisy a *Inter* pro čitelnost textu.
+- **Detaily:** Jemné šumové textury (noise overlay), skleněné efekty (glassmorphism) a plynulé animace, které dodávají pocit prémiového produktu.
 
-**Prerequisites:**  Node.js
+## 🛠️ Použité technologie
+Aplikace je postavena na moderním a rychlém stacku:
+- **Frontend:** React 18+ & Vite (pro bleskový vývoj a načítání).
+- **Styling:** Tailwind CSS 4 (využití nejnovějších utility-first standardů).
+- **Animace:** `motion/react` (Framer Motion) pro plynulé přechody a scroll-linked efekty.
+- **AI Engine:** Google Gemini SDK (`@google/genai`) s modelem `gemini-3.1-pro-preview`.
+- **Ikony:** Lucide React.
+- **Typová bezpečnost:** TypeScript.
 
+## 📈 Proč tohle portfolio?
+Není to jen statická stránka. Je to ukázka toho, co Daniel dokáže postavit pro své klienty: **rychlost, design a inteligentní automatizace v jednom balení.**
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+*Vytvořeno s důrazem na rychlost dodání a technickou preciznost.*
