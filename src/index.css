@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: #0e0e0e;
+  --color-surface-container-low: #131313;
+  --color-surface-container: #1a1919;
+  --color-surface-container-high: #201f1f;
+  --color-surface-container-highest: #262626;
+  
+  --color-primary: #49f4c8;
+  --color-primary-container: #00d4aa;
+  --color-on-primary-container: #004132;
+  
+  --color-secondary: #00a9fd;
+  --color-secondary-fixed: #abd6ff;
+  
+  --color-on-surface-variant: #adaaaa;
+  --color-outline-variant: rgba(73, 72, 71, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-white font-body selection:bg-primary selection:text-on-primary-container overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
+  }
+  
+  .glass-panel {
+    @apply bg-surface-container-highest/40 backdrop-blur-xl;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;700;800&display=swap');
