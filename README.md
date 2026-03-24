@@ -2,7 +2,7 @@
 
 Moderní, vysoce výkonné portfolio postavené pro prezentaci technické expertízy a rychlého dodávání AI produktů.
 
-##  Co to dělá?
+## 🚀 Co to dělá?
 Tato aplikace slouží jako digitální vizitka a prodejní nástroj pro Daniela Devátého. Hlavním cílem je ukázat schopnost stavět funkční MVP (Minimum Viable Products) v rekordním čase.
 
 ### Klíčové funkce:
@@ -11,13 +11,13 @@ Tato aplikace slouží jako digitální vizitka a prodejní nástroj pro Daniela
 - **Bento-Grid Portfolio:** Moderní zobrazení vybraných projektů a technického arzenálu.
 - **Konverzní Trychtýř:** Od prvního dojmu v Hero sekci až po kontaktní formulář, vše je optimalizováno pro rychlou akci.
 
-##  Jak to vypadá?
+## 🎨 Jak to vypadá?
 Design se drží estetiky **"Dark Luxury"**:
 - **Barevná paleta:** Hluboký antracit (`#0e0e0e`) v kombinaci s neonově tyrkysovými akcenty (`#49f4c8`).
 - **Typografie:** Kombinace moderních fontů *Space Grotesk* pro nadpisy a *Inter* pro čitelnost textu.
 - **Detaily:** Jemné šumové textury (noise overlay), skleněné efekty (glassmorphism) a plynulé animace, které dodávají pocit prémiového produktu.
 
-##  Použité technologie
+## 🛠️ Použité technologie
 Aplikace je postavena na moderním a rychlém stacku:
 - **Frontend:** React 18+ & Vite (pro bleskový vývoj a načítání).
 - **Styling:** Tailwind CSS 4 (využití nejnovějších utility-first standardů).
@@ -26,8 +26,27 @@ Aplikace je postavena na moderním a rychlém stacku:
 - **Ikony:** Lucide React.
 - **Typová bezpečnost:** TypeScript.
 
-##  Proč tohle portfolio?
-Není to jen statická stránka. Je to ukázka toho, co dokážu postavit pro své klienty: **rychlost, design a inteligentní automatizace v jednom balení.**
+## 📈 Proč tohle portfolio?
+Není to jen statická stránka. Je to ukázka toho, co Daniel dokáže postavit pro své klienty: **rychlost, design a inteligentní automatizace v jednom balení.**
+
+## 🐳 Docker Deployment
+Aplikace je plně kontejnerizována, což umožňuje její snadné spuštění v jakémkoliv prostředí.
+
+### Požadavky:
+- Docker
+- Docker Compose
+- Gemini API Key (pro funkčnost chatbota)
+
+### Jak to spustit:
+1. Vytvořte soubor `.env` v kořenovém adresáři a přidejte svůj klíč:
+   ```env
+   GEMINI_API_KEY=vás_klíč_zde
+   ```
+2. Sestavte a spusťte kontejner:
+   ```bash
+   docker-compose up -d --build
+   ```
+3. Aplikace bude dostupná na adrese `http://localhost:8080`.
 
 ---
 *Vytvořeno s důrazem na rychlost dodání a technickou preciznost.*
