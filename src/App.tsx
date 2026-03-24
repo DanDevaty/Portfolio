@@ -168,10 +168,10 @@ const Services = () => {
   return (
     <section ref={targetRef} id="services" className="relative h-[300vh] bg-surface-container-low">
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <div className="container mx-auto px-6 absolute top-16 left-0 right-0 z-10">
+        <div className="container mx-auto px-6 absolute top-12 left-0 right-0 z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <h2 className="font-headline text-4xl md:text-6xl font-bold text-white mb-3 tracking-tighter">
+              <h2 className="font-headline text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
                 What I <span className="text-primary">Build</span>
               </h2>
               <p className="text-on-surface-variant max-w-xl text-base md:text-lg font-light">
@@ -184,7 +184,7 @@ const Services = () => {
           </div>
         </div>
 
-        <motion.div style={{ x: springX }} className="flex gap-10 px-[10vw]">
+        <motion.div style={{ x: springX }} className="flex gap-10 px-[10vw] pt-32">
           {services.map((service) => (
             <div 
               key={service.id}
@@ -235,7 +235,7 @@ const Work = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-8">
               Selected <span className="text-primary">Projects</span>
             </h2>
             <p className="text-on-surface-variant max-w-xl">
@@ -359,7 +359,7 @@ const Contact = () => {
           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
           
           <div className="flex-1 space-y-8">
-            <h2 className="font-headline text-4xl font-bold text-white leading-tight">
+            <h2 className="font-headline text-4xl font-bold text-white leading-tight mb-6">
               Let's build something <span className="text-primary italic">exceptional</span>.
             </h2>
             <p className="text-on-surface-variant leading-relaxed">
