@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="cs" data-lang="cs">
+<head>
+<meta charset="utf-8">
+<title>CV – Daniel Devátý</title>
+<style>
+@font-face{font-family:"Bricolage";src:url(../fonts/bricolage-800.ttf) format("truetype");font-weight:800}
+@font-face{font-family:"JBMono";src:url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");font-weight:100 800}
+@page{size:A4;margin:0}
+html[data-lang="cs"] [lang="en"],html[data-lang="en"] [lang="cs"]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;overflow:hidden;background:#fff;color:#0E0D12;font:10.1pt/1.47 "Helvetica Neue",Arial,sans-serif;display:flex;flex-direction:column}
+.head{background:#0E0D12;color:#F4F1EA;padding:12mm 14mm 8.5mm;display:flex;justify-content:space-between;align-items:flex-end;gap:8mm}
+h1{margin:0;font:800 35pt/.95 "Bricolage",sans-serif;letter-spacing:-.03em}
+.role{margin:3mm 0 0;font:500 9pt "JBMono",monospace;letter-spacing:.04em;color:#FF6A2B;text-transform:uppercase}
+.contact{text-align:right;line-height:1.6;color:#E4E0EA}
+.contact a{color:#E4E0EA;text-decoration:none}
+.bar{height:1.6mm;background:#FF6A2B}
+.body{flex:1;padding:7.5mm 14mm 10mm;display:grid;grid-template-columns:minmax(0,1fr) 54mm;gap:9mm}
+.col{display:flex;flex-direction:column;gap:5.2mm}
+h2{margin:0 0 2.4mm;padding-bottom:1.3mm;border-bottom:1.2pt solid #0E0D12;font:800 13pt "Bricolage",sans-serif}
+.item{margin-bottom:2.4mm}
+.item:last-child{margin-bottom:0}
+.item b{font-size:10.2pt}
+.when{float:right;color:#5C5766}
+.item p{margin:.8mm 0 0}
+.dim{color:#5C5766}
+.intro{margin:0;font-size:10.2pt;line-height:1.5}
+.side p{margin:0 0 2.2mm}
+.box{margin-top:auto;padding:3.5mm;background:#F4F1EA;border-radius:3mm}
+.box b{font:800 11pt "Bricolage",sans-serif}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="head">
+<div>
+<h1>Daniel Devátý</h1>
+<p class="role"><span lang="cs">AI developer · aplikace, weby a servery</span><span lang="en">AI developer · apps, web and servers</span></p>
+</div>
+<div class="contact">
+<div><a href="mailto:info@dandev.cz">info@dandev.cz</a></div>
+<div><a href="https://dandev.cz">dandev.cz</a></div>
+<div lang="cs">Praha</div><div lang="en">Prague, Czechia</div>
+</div>
+</div>
+<div class="bar"></div>
+<div class="body">
+<div class="col">
+<p class="intro" lang="cs">Navrhuju a programuju mobilní aplikace, firemní systémy a AI automatizace – od nápadu přes design a backend až po vydání. Baví mě stavět s AI agenty a dávat jim vlastní nástroje.</p>
+<p class="intro" lang="en">I design and build mobile apps, business systems and AI automations – from the idea through design and backend to release. I love building with AI agents and giving them their own tools.</p>
+
+<div>
+<h2 lang="cs">Praxe</h2><h2 lang="en">Experience</h2>
+<div class="item"><span class="when"><span lang="cs">9/2026 – dosud</span><span lang="en">9/2026 – present</span></span><b lang="cs">Vývojář · Filipa a.s.</b><b lang="en">Developer · Filipa a.s.</b>
+<p lang="cs">Berta, interní systém pro výrobu, směny a sklad (Django, React): plánovač kapacit, milníky, příjem se skenem, mapy skladu. Celá iOS appka Berta HQ pro vedení (SwiftUI). Bezpečnostní audit a opravy, nasazení na servery.</p>
+<p lang="en">Berta, the internal system for production, shifts and warehouse (Django, React): capacity planner, milestones, scan-based receiving, warehouse maps. The whole Berta HQ iOS app for management (SwiftUI). Security audit and fixes, server deployments.</p></div>
+<div class="item"><span class="when"><span lang="cs">5/2026 – dosud</span><span lang="en">5/2026 – present</span></span><b lang="cs">Vývojář · Stocked s.r.o.</b><b lang="en">Developer · Stocked s.r.o.</b>
+<p lang="cs">Logisimo, platforma pro odesílání balíků: napojení dopravců TopTrans, FedEx, DHL a UPS, nový vzhled aplikace, překlady CZ/EN. Skener ve skladové appce STOCKISIMO (Flutter).</p>
+<p lang="en">Logisimo, a parcel shipping platform: TopTrans, FedEx, DHL and UPS integrations, app redesign, Czech/English translations. Scanner in the STOCKISIMO warehouse app (Flutter).</p></div>
+</div>
+
+<div>
+<h2 lang="cs">Vlastní produkty</h2><h2 lang="en">My own products</h2>
+<div class="item"><b>ScanKit</b> <span class="dim">· scankit.cz</span>
+<p lang="cs">Skenování desítek kódů naráz jako náhrada Scanditu: knihovna (WebAssembly, Apple Vision, ML Kit), appka pro iOS a Android a prodejní web.</p>
+<p lang="en">Reading dozens of codes at once, an alternative to Scandit: library (WebAssembly, Apple Vision, ML Kit), iOS and Android app and a sales website.</p></div>
+<div class="item"><b>Questy</b> <span class="dim">· questy.dandev.cz</span>
+<p lang="cs">Výzvy pro partu kamarádů. Expo, self-hosted Supabase na Raspberry Pi, Realtime, foto důkazy.</p>
+<p lang="en">Challenges for groups of friends. Expo, self-hosted Supabase on a Raspberry Pi, Realtime, photo proofs.</p></div>
+<div class="item"><b>NoMap</b>
+<p lang="cs">Prošlé ulice se vpíjejí do mapy. MapLibre, poloha na pozadí, prozkoumanost měst z OpenStreetMap.</p>
+<p lang="en">Streets you walk soak into the map. MapLibre, background location, city coverage from OpenStreetMap.</p></div>
+<div class="item"><b>ManHunt</b>
+<p lang="cs">GPS hra pro 4–30 hráčů, 6 režimů, end-to-end šifrování, vlastní relay server a mapy.</p>
+<p lang="en">GPS game for 4–30 players, 6 modes, end-to-end encryption, own relay server and maps.</p></div>
+<div class="item"><b lang="cs">Mňam a Vstříc</b><b lang="en">Mňam and Vstříc</b>
+<p lang="cs">Plánovač večeří podle rozpočtu (RevenueCat, Maestro E2E) a závod na půl cesty (PostGIS, push notifikace).</p>
+<p lang="en">Budget dinner planner (RevenueCat, Maestro E2E) and a race to meet halfway (PostGIS, push notifications).</p></div>
+<div class="item"><b lang="cs">Osobní dashboard</b><b lang="en">Personal dashboard</b>
+<p lang="cs">Next.js a Postgres s vlastním MCP serverem pro Clauda.</p>
+<p lang="en">Next.js and Postgres with my own MCP server for Claude.</p></div>
+<div class="item"><b>Homelab</b>
+<p lang="cs">Vlastní server na Raspberry Pi (Docker, Caddy, Cloudflare Tunnel), na kterém běží ManHunt, backend Questy a dandev.cz.</p>
+<p lang="en">My own Raspberry Pi server (Docker, Caddy, Cloudflare Tunnel) running ManHunt, the Questy backend and dandev.cz.</p></div>
+</div>
+</div>
+
+<div class="col side">
+<div>
+<h2 lang="cs">Vzdělání</h2><h2 lang="en">Education</h2>
+<p><b>SPŠE a Gymnázium V Úžlabině</b>, <span lang="cs">Praha</span><span lang="en">Prague</span></p>
+<p lang="cs">Informační technologie</p><p lang="en">Information technology</p>
+<p class="dim" lang="cs">maturita 2027</p><p class="dim" lang="en">graduating 2027</p>
+</div>
+<div>
+<h2 lang="cs">Dovednosti</h2><h2 lang="en">Skills</h2>
+<p><b>AI</b><br><span lang="cs">Claude API, MCP, hlasoví agenti, RAG</span><span lang="en">Claude API, MCP, voice agents, RAG</span></p>
+<p><b lang="cs">Mobil</b><b lang="en">Mobile</b><br>React Native, Expo, SwiftUI, Flutter</p>
+<p><b>Backend</b><br>Supabase, Postgres, Django, Node, Go, Python</p>
+<p><b lang="cs">Provoz</b><b lang="en">Ops</b><br>Docker, Linux, Raspberry Pi, Caddy, Cloudflare, Azure</p>
+</div>
+<div>
+<h2 lang="cs">Mimo kód</h2><h2 lang="en">Outside code</h2>
+<p lang="cs">Enduro na kole, lezení</p><p lang="en">Enduro mountain biking, climbing</p>
+</div>
+<div class="box">
+<b>Portfolio</b><br>
+<span lang="cs">Ukázky a screenshoty na dandev.cz</span><span lang="en">Screens and demos at dandev.cz</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+var l = new URLSearchParams(location.search).get("lang");
+if (l === "en") { document.documentElement.setAttribute("data-lang", "en"); document.documentElement.lang = "en"; document.title = "CV – Daniel Devátý"; }
+</script>
+</body>
+</html>
