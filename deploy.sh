@@ -14,7 +14,7 @@ SSH="ssh -p ${DEPLOY_PORT:-22} ${DEPLOY_KEY:+-i $DEPLOY_KEY -o IdentitiesOnly=ye
 rsync -rlt --delete -e "$SSH" \
   --include='/index.html' --include='/favicon.svg' \
   --include='/cv-daniel-devaty.pdf' --include='/cv-daniel-devaty-en.pdf' \
-  --include='/img/***' --include='/fonts/***' --exclude='*' \
+  --include='/img/***' --include='/fonts/***' --include='/video/***' --exclude='*' \
   ./ "$DEPLOY_TARGET:$DEPLOY_PATH/"
 
 echo "→ kontrola"

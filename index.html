@@ -11,6 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://dandev.cz/img/og.jpg">
 <meta name="theme-color" content="#0E0D12">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/bricolage-800.ttf" as="font" type="font/ttf" crossorigin>
 <style>
@@ -136,6 +137,64 @@ section{scroll-margin-top:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
 .chips li{padding:8px 14px;border-radius:999px;background:var(--chip)}
 
+/* hero photo */
+.me{display:flex;align-items:center;gap:16px}
+.me img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);flex:none}
+.me .mono{margin:0}
+
+/* ScanKit showcase */
+.showcase{margin:112px 0 0;padding:clamp(24px,5vw,56px);background:var(--ink);color:var(--paper);border-radius:40px}
+.showcase .eyebrow{color:var(--accent)}
+.showcase .grid2{align-items:start;gap:clamp(28px,4vw,56px)}
+.sk-copy{display:flex;flex-direction:column;gap:20px}
+.sk-copy .lead{margin:0;font-size:clamp(19px,2vw,22px);line-height:1.4;font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.facts li{padding:16px;border:1px solid var(--ink-line);border-radius:18px;font-size:15px;color:var(--muted-dark)}
+.facts b{display:block;font:700 26px/1.1 var(--display);color:var(--paper)}
+.sk-links{display:flex;flex-wrap:wrap;gap:12px}
+.sk-links a{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:600}
+.sk-links .primary{background:var(--accent);color:var(--ink)}.sk-links .primary:hover{color:var(--ink);background:#FF7D45}
+.sk-links .secondary{border:1.5px solid #4A4555;color:var(--paper)}.sk-links .secondary:hover{color:var(--paper);border-color:var(--paper)}
+.player{display:flex;flex-direction:column;gap:14px}
+.screen{position:relative;border-radius:22px;overflow:hidden;background:#0b0c0e;aspect-ratio:16/9;box-shadow:0 0 0 1px var(--ink-line)}
+.screen video{display:block;width:100%;height:100%;object-fit:cover}
+.screen .badge{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(14,13,18,.72);font:500 12px var(--mono);letter-spacing:.04em;color:var(--paper)}
+.screen .badge i{width:8px;height:8px;border-radius:50%;background:#FF4D4D;animation:pulse 1.6s ease-in-out infinite}
+.toggle{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(14,13,18,.72);color:var(--paper);display:grid;place-items:center;cursor:pointer}
+.toggle svg{width:18px;height:18px}
+.caption{margin:0;min-height:3.2em;font-size:15px;color:var(--on-dark)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{min-height:42px;padding:0 15px;border-radius:999px;border:1.5px solid var(--ink-line);background:transparent;color:var(--on-dark);font:500 14px var(--body);cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.tabs button:hover{border-color:var(--muted-dark);color:var(--paper)}
+.tabs button[aria-pressed="true"]{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+
+/* live previews */
+.lives{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.live{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.live:hover{color:var(--ink);transform:translateY(-4px);box-shadow:0 18px 36px -22px rgba(14,13,18,.5)}
+.bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#ECE7DD;border-bottom:1px solid var(--line)}
+.bar .dots{display:flex;gap:6px}.bar .dots span{width:10px;height:10px;border-radius:50%;background:#CFC6B6}
+.bar .url{flex:1;min-width:0;padding:4px 12px;border-radius:999px;background:#FFFFFF;font:500 12px var(--mono);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.view{position:relative;height:340px;overflow:hidden;background:#fff}
+.view img{width:100%;height:auto;animation:scrollsite 16s ease-in-out infinite alternate;animation-play-state:paused}
+.live.vis .view img{animation-play-state:running}
+.live:hover .view img,.live:focus-visible .view img{animation-duration:7s}
+@keyframes scrollsite{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 340px))}}
+.live-body{display:flex;flex-direction:column;gap:6px;padding:18px 20px 20px}
+.live-body h3{margin:0;font:800 22px/1.15 var(--display)}
+.live-body p{margin:0;color:var(--text-2);font-size:15px}
+.live-body .go{font-weight:600;color:var(--accent-text)}
+.note{margin:16px 0 0;font-size:14px;color:var(--muted)}
+
+/* about photo */
+.photo{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.photo img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* reveal on scroll */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none}.view img{animation:none}}
+
 .end{background:var(--accent);color:var(--ink);padding:88px 0 36px}
 .end h2{margin:0;max-width:12em;font:800 clamp(44px,7vw,92px)/.95 var(--display);letter-spacing:-.035em;text-wrap:balance}
 .end .ctas{margin-top:28px}
@@ -151,6 +210,7 @@ section{scroll-margin-top:16px}
 <a class="logo" href="#top">dandev<span>.</span>cz</a>
 <div class="nav-links">
 <a class="sec-link" href="#zkusenosti"><span lang="cs">Zkušenosti</span><span lang="en">Experience</span></a>
+<a class="sec-link" href="#scankit">ScanKit</a>
 <a class="sec-link" href="#projekty"><span lang="cs">Projekty</span><span lang="en">Projects</span></a>
 <a class="sec-link" href="#dovednosti"><span lang="cs">Dovednosti</span><span lang="en">Skills</span></a>
 <a class="sec-link" href="#omne"><span lang="cs">O mně</span><span lang="en">About</span></a>
@@ -165,7 +225,10 @@ section{scroll-margin-top:16px}
 
 <div id="top" class="hero grid2">
 <div class="hero-copy">
+<div class="me">
+<img src="img/dan.jpg" alt="Daniel Devátý" width="640" height="640">
 <p class="mono"><span lang="cs">AI developer · aplikace, weby a servery · Praha</span><span lang="en">AI developer · apps, web and servers · Prague</span></p>
+</div>
 <h1>Daniel<br>Devátý<span>.</span></h1>
 <p lang="cs">Stavím věci od nápadu po server, na kterém běží: mobilní appky, firemní systémy pro výrobu a sklady a AI automatizace. Denně vyvíjím s AI agenty.</p>
 <p lang="en">I build things from the idea to the server they run on: mobile apps, business systems for factories and warehouses, and AI automation. I work with AI agents every day.</p>
@@ -237,10 +300,77 @@ section{scroll-margin-top:16px}
 </div>
 </section>
 
+<section id="scankit" class="showcase reveal">
+<div class="grid2">
+<div class="sk-copy">
+<p class="mono eyebrow" style="margin:0"><span lang="cs">02 · Hlavní projekt</span><span lang="en">02 · Flagship project</span></p>
+<h2 class="h2">ScanKit</h2>
+<p class="lead" lang="cs">Kamera v telefonu přečte desítky čárových a 2D kódů naráz – celou paletu, celou etiketu, bez drahé čtečky.</p>
+<p class="lead" lang="en">A phone camera reads dozens of barcodes and 2D codes at once – a whole pallet, a whole label, no pricey scanner.</p>
+<ul class="facts">
+<li><b lang="cs">24 kódů</b><b lang="en">24 codes</b><span lang="cs">v jednom záběru</span><span lang="en">in a single frame</span></li>
+<li><b>Offline</b><span lang="cs">přímo v zařízení</span><span lang="en">right on the device</span></li>
+<li><b lang="cs">Celá etiketa</b><b lang="en">Full label</b><span>GS1 · VDA 4902 · Odette</span></li>
+<li><b lang="cs">3 konektory</b><b lang="en">3 connectors</b><span>Flutter · Capacitor · HTTP API</span></li>
+</ul>
+<p style="margin:0;color:var(--on-dark)" lang="cs">Vlastní engine: WebAssembly (zxing-cpp) na webu, Apple Vision a Google ML Kit v appkách, OCR jako záloha. Postavil jsem knihovnu, appku pro iOS a Android, prodejní web, živé demo i tahle videa.</p>
+<p style="margin:0;color:var(--on-dark)" lang="en">Own engine: WebAssembly (zxing-cpp) on the web, Apple Vision and Google ML Kit in apps, OCR as a fallback. I built the library, the iOS and Android app, the sales website, the live demo and these videos.</p>
+<div class="sk-links">
+<a class="primary" href="https://scankit.cz">scankit.cz →</a>
+<a class="secondary" href="https://scankit.cz/demo.html"><span lang="cs">Živé demo</span><span lang="en">Live demo</span></a>
+</div>
+</div>
+<div class="player">
+<div class="screen">
+<video id="sk-video" muted loop playsinline preload="none" poster="video/hero.jpg" width="1920" height="1080" aria-describedby="sk-caption">
+<source src="video/hero.mp4" type="video/mp4">
+</video>
+<span class="badge" aria-hidden="true"><i></i>LIVE</span>
+<button class="toggle" type="button" id="sk-toggle" aria-label="Pozastavit video / Pause video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+</div>
+<p class="caption" id="sk-caption" aria-live="polite"></p>
+<div class="tabs" role="group" aria-label="Ukázky ScanKitu / ScanKit demos">
+<button type="button" data-clip="hero" aria-pressed="true"><span lang="cs">Regál</span><span lang="en">Shelf</span></button>
+<button type="button" data-clip="matrix" aria-pressed="false"><span lang="cs">Celá paleta</span><span lang="en">Whole pallet</span></button>
+<button type="button" data-clip="find" aria-pressed="false"><span lang="cs">Hledání</span><span lang="en">Find</span></button>
+<button type="button" data-clip="label" aria-pressed="false"><span lang="cs">Etiketa</span><span lang="en">Label</span></button>
+<button type="button" data-clip="integrace" aria-pressed="false"><span lang="cs">Integrace</span><span lang="en">Integration</span></button>
+<button type="button" data-clip="api" aria-pressed="false">API</button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="live" class="sec">
+<div class="sec-head">
+<p class="mono eyebrow"><span lang="cs">03 · Živě na webu</span><span lang="en">03 · Live on the web</span></p>
+<h2 class="h2"><span lang="cs">Weby, na kterých jsem dělal</span><span lang="en">Websites I’ve worked on</span></h2>
+</div>
+<div class="lives">
+<a class="live reveal" href="https://scankit.cz">
+<div class="bar"><span class="dots" aria-hidden="true"><span></span><span></span><span></span></span><span class="url">scankit.cz</span></div>
+<div class="view"><img src="img/live/scankit.jpg" alt="" width="640" height="1700" loading="lazy"></div>
+<div class="live-body"><h3>ScanKit</h3><p lang="cs">Prodejní web s videi, ceníkem a živým demem přes kameru.</p><p lang="en">Sales website with videos, pricing and a live camera demo.</p><span class="go"><span lang="cs">Otevřít web →</span><span lang="en">Open website →</span></span></div>
+</a>
+<a class="live reveal" href="https://questy.dandev.cz">
+<div class="bar"><span class="dots" aria-hidden="true"><span></span><span></span><span></span></span><span class="url">questy.dandev.cz</span></div>
+<div class="view" style="background:#121016"><img src="img/live/questy.jpg" alt="" width="640" height="1120" loading="lazy"></div>
+<div class="live-body"><h3>Questy</h3><p lang="cs">Web appky s katalogem questů, účtem a podporou pro obchody.</p><p lang="en">The app’s website with the quest catalogue, account page and store support.</p><span class="go"><span lang="cs">Otevřít web →</span><span lang="en">Open website →</span></span></div>
+</a>
+<a class="live reveal" href="https://logisimo.cz">
+<div class="bar"><span class="dots" aria-hidden="true"><span></span><span></span><span></span></span><span class="url">logisimo.cz</span></div>
+<div class="view"><img src="img/live/logisimo.jpg" alt="" width="640" height="1700" loading="lazy"></div>
+<div class="live-body"><h3>Logisimo</h3><p lang="cs">Platforma pro odesílání balíků, na které jsem napojoval dopravce.</p><p lang="en">The parcel shipping platform where I built carrier integrations.</p><span class="go"><span lang="cs">Otevřít web →</span><span lang="en">Open website →</span></span></div>
+</a>
+</div>
+<p class="note" lang="cs">Náhledy se samy posouvají, kliknutím otevřeš skutečný web.</p>
+<p class="note" lang="en">The previews scroll on their own; click to open the real site.</p>
+</section>
+
 <section id="projekty" class="sec">
 <div class="proj-head">
 <div>
-<p class="mono eyebrow"><span lang="cs">02 · Projekty</span><span lang="en">02 · Projects</span></p>
+<p class="mono eyebrow"><span lang="cs">04 · Všechny projekty</span><span lang="en">04 · All projects</span></p>
 <h2 class="h2"><span lang="cs">Co jsem postavil</span><span lang="en">What I’ve built</span></h2>
 </div>
 <div class="filters" role="group" aria-label="Filtr projektů / Project filter">
@@ -366,7 +496,7 @@ azure · ubuntu 24.04</p></div>
 
 <section id="dovednosti" class="sec">
 <div class="sec-head">
-<p class="mono eyebrow"><span lang="cs">03 · Dovednosti</span><span lang="en">03 · Skills</span></p>
+<p class="mono eyebrow"><span lang="cs">05 · Dovednosti</span><span lang="en">05 · Skills</span></p>
 <h2 class="h2"><span lang="cs">S čím pracuju</span><span lang="en">What I work with</span></h2>
 </div>
 <div class="skills">
@@ -382,7 +512,7 @@ azure · ubuntu 24.04</p></div>
 <section id="omne" class="sec" style="padding-bottom:112px">
 <div class="about">
 <div class="about-copy">
-<p class="mono eyebrow" style="margin:0"><span lang="cs">04 · O mně</span><span lang="en">04 · About me</span></p>
+<p class="mono eyebrow" style="margin:0"><span lang="cs">06 · O mně</span><span lang="en">06 · About me</span></p>
 <h2 class="h2"><span lang="cs">Ahoj, jsem Dan.</span><span lang="en">Hi, I’m Dan.</span></h2>
 <p class="big" lang="cs">Nejvíc mě baví AI a automatizace. Stavím s AI agenty, dávám jim vlastní nástroje a nechávám je dělat nudnou práci, abych se mohl soustředit na to, co má smysl.</p>
 <p class="big" lang="en">What I love most is AI and automation. I build with AI agents, give them their own tools and let them do the boring work, so I can focus on what matters.</p>
@@ -390,6 +520,7 @@ azure · ubuntu 24.04</p></div>
 <p class="big" lang="en">When I’m not coding, I ride enduro on my bike or go climbing.</p>
 </div>
 <div class="side">
+<div class="photo"><img src="img/dan.jpg" alt="Daniel Devátý" width="640" height="640" loading="lazy"></div>
 <div class="box">
 <p class="mono"><span lang="cs">Vzdělání</span><span lang="en">Education</span> · 2023–2027</p>
 <h3>SPŠE a Gymnázium V Úžlabině</h3>
@@ -461,6 +592,65 @@ azure · ubuntu 24.04</p></div>
       });
     });
   });
+
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ScanKit: přepínání videí, pauza, přehrávání jen když je vidět
+  var clips = {
+    hero: ["Telefon jede podél regálu a postupně přečte 12 štítků.", "A phone moves along a shelf and reads 12 labels one by one."],
+    matrix: ["Kamera přečte 24 kódů na paletě najednou a sečte stejné položky.", "The camera reads 24 codes on a pallet at once and adds up identical items."],
+    find: ["Vychystávání: mezi desítkami štítků se rozsvítí jen hledané položky.", "Picking: among dozens of labels only the wanted items light up."],
+    label: ["Celý přepravní štítek VDA/Odette se přečte najednou, pole po poli.", "A whole VDA/Odette shipping label is read at once, field by field."],
+    integrace: ["Pár řádků Flutteru a firemní appka umí skenovat.", "A few lines of Flutter and a company app can scan."],
+    api: ["Fotka štítku jde na HTTP API ve firemní síti, data zůstávají u vás.", "A label photo goes to the HTTP API inside your network, the data stays with you."]
+  };
+  var video = document.getElementById("sk-video");
+  var caption = document.getElementById("sk-caption");
+  var toggle = document.getElementById("sk-toggle");
+  var current = "hero", paused = reduce, visible = false;
+  var playIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>';
+  var pauseIcon = toggle ? toggle.innerHTML : "";
+  function lang() { return root.getAttribute("data-lang") === "en" ? 1 : 0; }
+  function setCaption() { if (caption) caption.textContent = clips[current][lang()]; }
+  function sync() {
+    if (!video) return;
+    if (visible && !paused) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+    else video.pause();
+    toggle.innerHTML = paused ? playIcon : pauseIcon;
+  }
+  if (video) {
+    setCaption();
+    document.querySelectorAll("[data-clip]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        current = b.getAttribute("data-clip");
+        document.querySelectorAll("[data-clip]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        video.setAttribute("poster", "video/" + current + ".jpg");
+        video.querySelector("source").setAttribute("src", "video/" + current + ".mp4");
+        video.load();
+        paused = false;
+        setCaption();
+        sync();
+      });
+    });
+    toggle.addEventListener("click", function () { paused = !paused; sync(); });
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) { b.addEventListener("click", setCaption); });
+  }
+
+  // Objevení při scrollu, spuštění videa a posouvání náhledů jen ve viditelné části
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.target === video) { visible = e.isIntersecting; sync(); return; }
+        if (e.isIntersecting) e.target.classList.add("in");
+        if (e.target.classList.contains("live")) e.target.classList.toggle("vis", e.isIntersecting);
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll(".reveal, .live").forEach(function (el) { io.observe(el); });
+    if (video) io.observe(video);
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+    if (video) { visible = true; sync(); }
+  }
 })();
 </script>
 </body>
